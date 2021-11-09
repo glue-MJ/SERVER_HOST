@@ -2,7 +2,7 @@ import datetime
 import time
 
 def main():
-    for i in range(0, 10):
+    for i in range(0, 100):
         with open('LOGS.txt', 'a') as file:
             file.write(f'[{datetime.datetime.now()}]: LOGGED\n')
             time.sleep(5)
