@@ -6,7 +6,7 @@ app = Flask(__name__)
 @app.route("/", methods=('GET', 'POST'))
 def index():
     if request.method=='POST':
-        if request.form["TRIGGER"] == "STOP PROGRAM":
+        if request.form["TRIGGER"] == "START PROGRAM":
             subprocess.run("python collector.py", shell=True)
         else:
             pass
