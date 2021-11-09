@@ -17,13 +17,13 @@
         };
         function CHANGE_TEXT(event){
             if (incre==0){
-                document.getElementById("TRIGGER").value = "STOP PROGRAM"
                 ALERT_USER_START()
+                document.getElementById("TRIGGER").value = "START PROGRAM"
                 incre+=1
             } else {
                 incre -= 1
-                document.getElementById("TRIGGER").value = "START PROGRAM"
                 ALERT_USER_STOP()
+                document.getElementById("TRIGGER").value = "STOP PROGRAM"
             };
         };
     </script>
