@@ -8,6 +8,7 @@
 </head>
 <body>
     <script>
+        var incre = 0
         function ALERT_USER_START(){
             alert("PROGRAM STARTED")
         };
@@ -15,15 +16,18 @@
             alert("PROGRAM STOPPED")
         };
         function CHANGE_TEXT(event){
-            if (document.getElementById("TRIGGER").value == "START NOW"){
-                document.getElementById("TRIGGER").value = "STOP NOW"
+            if (incre==0){
+                document.getElementById("TRIGGER").value = "STOP PROGRAM"
                 ALERT_USER_STOP()
-            }else
-            document.getElementById("TRIGGER").value = "START NOW"
-            ALERT_USER_START()
+                incre+=1
+            } else {
+                incre -= 1
+                document.getElementById("TRIGGER").value = "START PROGRAM"
+                ALERT_USER_START()
+            };
         };
     </script>
     <h1>HI</h1>
-    <input type="submit" id="TRIGGER" value="START NOW" onclick="CHANGE_TEXT(event)">
+    <input type="submit" id="TRIGGER" name="TRIGGER" value="START NOW" onclick="CHANGE_TEXT(event)">
 </body>
 </html>
