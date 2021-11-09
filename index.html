@@ -8,22 +8,22 @@
 </head>
 <body>
     <script>
-        function ALERT_USER_START(event){
+        function ALERT_USER_START(){
             alert("PROGRAM STARTED")
-        }
-        function ALERT_USER_STOP(event){
+        };
+        function ALERT_USER_STOP(){
             alert("PROGRAM STOPPED")
-        }
+        };
         function CHANGE_TEXT(event){
             if (document.getElementById("TRIGGER").value == "START NOW"){
                 document.getElementById("TRIGGER").value = "STOP NOW"
+                ALERT_USER_STOP()
             }else
             document.getElementById("TRIGGER").value = "START NOW"
-        }
+            ALERT_USER_START()
+        };
     </script>
     <h1>HI</h1>
-    <!-- <input type='submit' name='submit_button' value="START PROGRAM" onclick="ALERT_USER_START(event)">
-    <input type='submit' name='submit_button' value="START PROGRAM" onclick="ALERT_USER_STOP(event)"> -->
     <input type="submit" id="TRIGGER" value="START NOW" onclick="CHANGE_TEXT(event)">
 </body>
 </html>
