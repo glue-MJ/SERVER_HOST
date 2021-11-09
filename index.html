@@ -18,12 +18,12 @@
         function CHANGE_TEXT(event){
             if (incre==0){
                 document.getElementById("TRIGGER").value = "STOP PROGRAM"
-                ALERT_USER_STOP()
+                ALERT_USER_START()
                 incre+=1
             } else {
                 incre -= 1
                 document.getElementById("TRIGGER").value = "START PROGRAM"
-                ALERT_USER_START()
+                ALERT_USER_STOP()
             };
         };
     </script>
