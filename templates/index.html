@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOST SERVER</title>
+</head>
+<body>
+    <script>
+        var incre = 0;
+        function CHANGE_TEXT(event){
+            if (incre==0){
+                alert("PROGRAM LAUNCH")
+                document.getElementById("TRIGGER").value = "START PROGRAM"
+                incre+=1;
+            } else if (incre==1){
+                alert("PROGRAM STARTED")
+                document.getElementById("TRIGGER").value = "STOP PROGRAM"
+                incre+=1
+            } else {
+                incre -= 1
+                alert("PROGRAM STOPPED")
+                document.getElementById("TRIGGER").value = "START PROGRAM"
+            };
+        };
+    </script>
+    <h1>HI</h1>
+    <input type="submit" id="TRIGGER" name="TRIGGER" value="LAUNCH" onclick="CHANGE_TEXT(event)">
+</body>
+</html>

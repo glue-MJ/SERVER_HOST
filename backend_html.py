@@ -8,6 +8,7 @@ def index():
     if request.method=='POST':
         if request.form["TRIGGER"] == "START PROGRAM":
             subprocess.run("python collector.py", shell=True)
+            print("RUN")
         else:
             pass
     return render_template('index.html')
