@@ -7,7 +7,23 @@
     <title>HOST SERVER</title>
 </head>
 <body>
+    <script>
+        function ALERT_USER_START(event){
+            alert("PROGRAM STARTED")
+        }
+        function ALERT_USER_STOP(event){
+            alert("PROGRAM STOPPED")
+        }
+        function CHANGE_TEXT(event){
+            if (document.getElementById("TRIGGER").value == "START NOW"){
+                document.getElementById("TRIGGER").value == "STOP NOW"
+            }else
+            document.getElementById("TRIGGER").value == "START NOW"
+        }
+    </script>
     <h1>HI</h1>
-    <form action='POST'></form>
+    <!-- <input type='submit' name='submit_button' value="START PROGRAM" onclick="ALERT_USER_START(event)">
+    <input type='submit' name='submit_button' value="START PROGRAM" onclick="ALERT_USER_STOP(event)"> -->
+    <input type="submit" id="TRIGGER" value="START NOW" onclick="CHANGE_TEXT(event)">
 </body>
 </html>
